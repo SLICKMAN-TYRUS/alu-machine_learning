@@ -5,13 +5,13 @@
 def determinant(matrix):
     """Helper function to calculate determinant."""
     n = len(matrix)
-    
+
     if n == 1:
         return matrix[0][0]
-    
+
     if n == 2:
         return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
-    
+
     det = 0
     for j in range(n):
         minor = []
@@ -23,14 +23,14 @@ def determinant(matrix):
             minor.append(minor_row)
         cofactor = ((-1) ** j) * matrix[0][j]
         det += cofactor * determinant(minor)
-    
+
     return det
 
 
 def minor(matrix):
     """Helper function to calculate minor matrix."""
     n = len(matrix)
-    
+
     if n == 1:
         return [[1]]
 
@@ -46,7 +46,7 @@ def minor(matrix):
                         if col_idx != j:
                             sub_row.append(matrix[row_idx][col_idx])
                     submatrix.append(sub_row)
-            
+
             minor_row.append(determinant(submatrix))
         minor_matrix.append(minor_row)
 
