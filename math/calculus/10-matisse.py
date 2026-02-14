@@ -1,4 +1,3 @@
-cat << 'EOF' > 10-matisse.py
 #!/usr/bin/env python3
 """
 Module for computing the derivative of a polynomial represented
@@ -47,4 +46,3 @@ def poly_derivative(poly):
         return [0]
 
     return deriv
-EOF

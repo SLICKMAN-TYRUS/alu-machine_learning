@@ -1,4 +1,3 @@
-cat << 'EOF' > 17-integrate.py
 #!/usr/bin/env python3
 """
 Module for computing the integral of a polynomial represented
@@ -45,4 +44,3 @@ def poly_integral(poly, C=0):
         integ.pop()
 
     return integ
-EOF

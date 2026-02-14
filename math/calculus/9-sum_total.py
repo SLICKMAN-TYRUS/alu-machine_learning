@@ -1,4 +1,3 @@
-cat << 'EOF' > 9-sum_total.py
 #!/usr/bin/env python3
 """
 Module for computing the summation of i^2 from i = 1 to n
@@ -23,4 +22,3 @@ def summation_i_squared(n):
     if n == 0:
         return 0
     return n * n + summation_i_squared(n - 1)
-EOF
