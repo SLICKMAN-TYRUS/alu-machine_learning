@@ -17,6 +17,6 @@ def summation_i_squared(n):
         int: The value of the summation if n is valid.
         None: If n is not an integer or is negative.
     """
-    if not isinstance(n, int) or n < 0:
+    if not isinstance(n, int) or isinstance(n, bool) or n < 0:
         return None
     return n * (n + 1) * (2 * n + 1) // 6
