@@ -27,6 +27,7 @@ def poly_derivative(poly):
         if not isinstance(c, (int, float)):
             return None
 
+    # Constant polynomial -> derivative is [0]
     if len(poly) == 1:
         return [0]
 
@@ -36,6 +37,7 @@ def poly_derivative(poly):
         deriv.append(i * poly[i])
         i += 1
 
+    # If all coefficients are zero, return [0]
     all_zero = True
     for c in deriv:
         if c != 0:

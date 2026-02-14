@@ -40,6 +40,7 @@ def poly_integral(poly, C=0):
         integ.append(coeff)
         i += 1
 
+    # Trim trailing zeros to keep list as small as possible
     while len(integ) > 1 and integ[-1] == 0:
         integ.pop()
 
