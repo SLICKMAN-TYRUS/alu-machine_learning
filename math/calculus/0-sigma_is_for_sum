@@ -1,3 +1,1 @@
-cat << 'EOF' > 0-sigma_is_for_sum
 3
-EOF
