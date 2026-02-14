@@ -1,0 +1,3 @@
+cat << 'EOF' > 12-integral
+3
+EOF

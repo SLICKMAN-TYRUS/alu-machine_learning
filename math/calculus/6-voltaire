@@ -1,0 +1,3 @@
+cat << 'EOF' > 6-voltaire
+1
+EOF

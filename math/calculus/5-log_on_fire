@@ -1,0 +1,3 @@
+cat << 'EOF' > 5-log_on_fire
+3
+EOF

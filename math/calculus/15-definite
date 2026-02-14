@@ -1,0 +1,3 @@
+cat << 'EOF' > 15-definite
+1
+EOF

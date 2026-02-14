@@ -1,0 +1,3 @@
+cat << 'EOF' > 8-all-together
+3
+EOF

@@ -1,0 +1,3 @@
+cat << 'EOF' > 4-hello_derivatives
+3
+EOF

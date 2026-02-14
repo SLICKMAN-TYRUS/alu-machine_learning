@@ -1,0 +1,3 @@
+cat << 'EOF' > 1-seegma
+2
+EOF
