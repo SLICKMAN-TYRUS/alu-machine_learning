@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # Calculus Project
 
 This directory contains the Calculus project for the `alu-machine_learning` repository.
@@ -45,16 +44,16 @@ Each of the following files contains the **number of the correct answer** for a 
 
 These Python files implement calculus-related functions:
 
-- `9-sum_total.py`  
-  - Defines `summation_i_squared(n)` which computes  
-    \sum_{i=1}^{n} i^2  
+- `9-sum_total.py`
+  - Defines `summation_i_squared(n)` which computes
+    \sum_{i=1}^{n} i^2
     using recursion and no loops.
 
-- `10-matisse.py`  
+- `10-matisse.py`
   - Defines `poly_derivative(poly)` which returns the derivative
     of a polynomial represented as a list of coefficients.
 
-- `17-integrate.py`  
+- `17-integrate.py`
   - Defines `poly_integral(poly, C=0)` which returns the integral
     of a polynomial represented as a list of coefficients, with
     integration constant `C`.
@@ -65,5 +64,3 @@ All Python files:
 - Are compatible with Python 3
 - Follow pycodestyle as much as possible
 - Include module and function documentation strings
-
-EOF
