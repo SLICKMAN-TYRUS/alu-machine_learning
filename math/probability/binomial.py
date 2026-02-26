@@ -24,7 +24,7 @@ class Binomial:
                 raise TypeError("data must be a list")
             if len(data) < 2:
                 raise ValueError("data must contain multiple values")
-            
+
             mean = sum(data) / len(data)
             variance = sum([(x - mean) ** 2 for x in data]) / len(data)
             p = 1 - (variance / mean)
@@ -39,20 +39,20 @@ class Binomial:
             k = int(k)
         if k < 0:
             return 0
-        
+
         n_fact = 1
         k_fact = 1
         n_k_fact = 1
-        
+
         for i in range(1, self.n + 1):
             n_fact *= i
         for i in range(1, k + 1):
             k_fact *= i
         for i in range(1, self.n - k + 1):
             n_k_fact *= i
-            
+
         n_choose_k = n_fact / (k_fact * n_k_fact)
-        
+
         return n_choose_k * (self.p ** k) * ((1 - self.p) ** (self.n - k))
 
     def cdf(self, k):
@@ -63,7 +63,7 @@ class Binomial:
             k = int(k)
         if k < 0:
             return 0
-        
+
         cdf_val = 0
         for i in range(k + 1):
             cdf_val += self.pmf(i)
