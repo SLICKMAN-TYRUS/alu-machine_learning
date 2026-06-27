@@ -7,10 +7,15 @@ import time
 import math
 
 
-if __name__ == '__main__':
+def main():
+    """Fetch and print the location of a GitHub user.
+
+    Usage: ./2-user_location.py <github_api_url>
+    Prints the user location, 'Not found' if the user does not exist,
+    or 'Reset in X min' if the rate limit has been exceeded.
+    """
     url = sys.argv[1]
-    headers = {"User-Agent": "alu-machine_learning"}
-    response = requests.get(url, headers=headers)
+    response = requests.get(url)
 
     if response.status_code == 403:
         reset_time = int(response.headers.get("X-Ratelimit-Reset", 0))
@@ -21,4 +26,8 @@ if __name__ == '__main__':
     else:
         data = response.json()
         print(data.get("location"))
+
+
+if __name__ == '__main__':
+    main()
 EOF
