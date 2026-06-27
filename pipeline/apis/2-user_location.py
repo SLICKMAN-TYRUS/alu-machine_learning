@@ -1,4 +1,3 @@
-cat > pipeline/apis/2-user_location.py << 'EOF'
 #!/usr/bin/env python3
 """Script to print the location of a GitHub user via the GitHub API."""
 import requests
@@ -11,8 +10,8 @@ def main():
     """Fetch and print the location of a GitHub user.
 
     Usage: ./2-user_location.py <github_api_url>
-    Prints the user location, 'Not found' if the user does not exist,
-    or 'Reset in X min' if the rate limit has been exceeded.
+    Prints the user location, Not found if the user does not exist,
+    or Reset in X min if the rate limit has been exceeded.
     """
     url = sys.argv[1]
     response = requests.get(url)
@@ -30,4 +29,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-EOF
