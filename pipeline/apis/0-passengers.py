@@ -14,7 +14,7 @@ def availableShips(passengerCount):
               or an empty list if none are found.
     """
     ships = []
-    url = "https://swapi.dev/api/starships/"
+    url = "https://swapi-api.hbtn.io/api/starships/"
 
     while url:
         response = requests.get(url)
@@ -22,7 +22,7 @@ def availableShips(passengerCount):
 
         for ship in data.get("results", []):
             passengers = ship.get("passengers", "0")
-            passengers = passengers.replace(",", "").replace(".", "")
+            passengers = passengers.replace(",", "").replace(" ", "")
             try:
                 if int(passengers) >= passengerCount:
                     ships.append(ship["name"])

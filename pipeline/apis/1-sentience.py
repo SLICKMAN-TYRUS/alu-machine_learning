@@ -14,7 +14,7 @@ def sentientPlanets():
         list: Names of home planets of sentient species.
     """
     planets = []
-    url = "https://swapi.dev/api/species/"
+    url = "https://swapi-api.hbtn.io/api/species/"
 
     while url:
         response = requests.get(url)
