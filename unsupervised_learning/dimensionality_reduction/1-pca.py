@@ -13,8 +13,6 @@ def pca(X, ndim):
     """
     if not isinstance(X, np.ndarray) or X.ndim != 2:
         return None
-    if not isinstance(ndim, int) or not 0 < ndim <= X.shape[1]:
-        return None
     X_m = X - np.mean(X, axis=0)
     _, _, Vt = np.linalg.svd(X_m, full_matrices=False)
     return np.matmul(X_m, Vt[:ndim].T)
