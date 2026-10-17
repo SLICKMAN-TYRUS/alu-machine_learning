@@ -28,7 +28,7 @@ def BIC(X, kmin=1, kmax=None, iterations=1000, tol=1e-5, verbose=False):
         kmax = n
     if not isinstance(kmin, int) or not isinstance(kmax, int):
         return fail
-    if kmin < 1 or kmax < kmin or kmax > n:
+    if kmin < 1 or kmax <= kmin or kmax > n:
         return fail
     if not isinstance(iterations, int) or iterations <= 0:
         return fail

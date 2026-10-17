@@ -29,8 +29,11 @@ def expectation(X, pi, m, S):
     if not isinstance(S, np.ndarray) or S.shape != (k, d, d):
         return None, None
     g = np.zeros((k, n))
-    for i in range(k):
-        g[i] = pi[i] * pdf(X, m[i], S[i])
+    try:
+        for i in range(k):
+            g[i] = pi[i] * pdf(X, m[i], S[i])
+    except np.linalg.LinAlgError:
+        return None, None
     marginal = np.sum(g, axis=0)
     g = g / marginal
     ll = np.sum(np.log(marginal))
